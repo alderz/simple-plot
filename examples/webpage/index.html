@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple plot example</title>
+    <script src="../../dist/simple-plot-iife.js"></script>
+    <script>
+        function draw() {
+            const canvas = document.getElementById('canvas-plot');
+            SimplePlot.plot(canvas, [
+                {x: 5, y: 0},
+                {x: 10, y: 30},
+                {x: 15, y: 40},
+                {x: 20, y: 20},
+                {x: 30, y: 25}
+            ], [
+                {label: "A", position: 10},
+                {label: "B", position: 15},
+                {label: "C", position: 20},
+            ]);
+        }
+        window.onload = draw;
+    </script>
+</head>
+<body>
+<canvas width="700" height="300" id="canvas-plot"></canvas>
+</body>
+</html>
